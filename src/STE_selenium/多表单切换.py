@@ -45,31 +45,35 @@ print('聚焦')
 sleep(2)
 
 
-driver.find_element_by_xpath("//input[@name='email']")
-#driver.find_element_by_xpath('//*[@name="email"]').clear()
+driver.find_element_by_xpath("//input[@name='email']").claer()
 print("bb")
 sleep(2)
 
 
-
+# 定位到账号框并输入值
 driver.find_element_by_name('email').send_keys("lrm1106361798")
 print("cc")
 sleep(2)
+
 
 driver.find_element_by_name('password').clear()
 print("dd")
 sleep(2)
 
+# 定位到密码框并输入值
 driver.find_element_by_name('password').send_keys("lrm149206lrm")
 print("ee")
 sleep(2)
 
+# 定位到登录按钮并点击
 driver.find_element_by_id('dologin').click()
 print("ff")
 sleep(2)
 
+# 返回最外层
 driver.switch_to.default_content()  
 print("gg")
 sleep(2)
+
 
 driver.quit()

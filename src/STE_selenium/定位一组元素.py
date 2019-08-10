@@ -13,13 +13,16 @@
 from selenium import webdriver
 from time import sleep
 
+# 打开网页
 driver = webdriver.Chrome()
 driver.get("http://www.baidu.com")
 print("开始")
 sleep(2)
 
+# 定位输入框并输入值
 driver.find_element_by_id("kw").send_keys("selenium")
 print('11')
+# 定位搜索框并点击
 driver.find_element_by_id("su").click()
 print('22')
 sleep(2)
